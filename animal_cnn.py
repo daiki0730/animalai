@@ -43,4 +43,4 @@ def model_train():
 
     opt = keras.optimizers.rmsprop(lr=0.01, decay=1e-6)
 
-    model.compile(loss='categorical_crossentropy', optimizer=opt,metrics)
+    model.compile(loss='categorical_crossentropy', optimizer=opt,metrics=['accuracy'])

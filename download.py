@@ -14,17 +14,17 @@ savedir = "/Users/daiki/animalai/" + animalname
 
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
-    text = animalname,
-    per_page = 400,
-    media = 'photos',
-    sort = 'relevance',
+    text        = animalname,
+    per_page    = 400,
+    media       = 'photos',
+    sort        = 'relevance',
     safe_search = 1,
-    extras = 'url_q, license'
+    extras      = 'url_q, license'
 )
 
 photos = result['photos']
 for i, photo in enumerate(photos['photo']):
-    url_q = photo['url_q']
+    url_q    = photo['url_q']
     filepath = savedir + '/' + photo['id'] + '.jpg'
     if os.path.exists(filepath): continue
     urlretrieve(url_q ,filepath)

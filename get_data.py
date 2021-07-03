@@ -18,7 +18,7 @@ for index, classlabel in enumerate(classes):
         image = Image.open(file)
         image = image.convert("RGB")
         image = image.resize((image_size,image_size))
-        data = np.asarray(image)
+        data  = np.asarray(image)
         X.append(data)
         Y.append(index)
 

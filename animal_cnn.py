@@ -2,6 +2,7 @@ from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras.utils import np_utils
+import keras
 import numpy as np
 
 classes     = ["monkey","boar","crow"]
@@ -42,7 +43,7 @@ def model_train(X, y):
     model.add(Activation('softmax'))
 
     import tensorflow
-    opt = tensorflow.keras.optimizers.RMSprop(lr=0.0003, decay=1e-6)
+    opt = keras.optimizers.RMSprop(lr=0.0003, decay=1e-6)
 
     model.compile(loss='categorical_crossentropy', optimizer=opt,metrics=['accuracy'])
 

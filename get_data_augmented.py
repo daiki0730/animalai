@@ -6,7 +6,7 @@ from sklearn import model_selection
 classes = ["monkey","boar","crow"]
 num_classes = len(classes)
 image_size = 50
-num_tesdata = 100
+num_tesdata = 10
 
 # 画像の読み込み
 X_train = []

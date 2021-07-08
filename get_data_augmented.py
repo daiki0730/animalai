@@ -6,7 +6,7 @@ from sklearn import model_selection
 classes = ["monkey","boar","crow"]
 num_classes = len(classes)
 image_size = 50
-num_tesdata = 10
+num_tesdata = 100
 
 # 画像の読み込み
 X_train = []
@@ -28,9 +28,6 @@ for index, classlabel in enumerate(classes):
             X_test.append(data)
             Y_test.append(index)
         else:
-            X_train.append(data)
-            Y_train.append(index)
-
             for angle in range(-20, 20, 5):
                 img_r = image.rotate(angle)
                 data  = np.asarray(img_r)
@@ -41,6 +38,7 @@ for index, classlabel in enumerate(classes):
                 data      = np.asarray(img_trans)
                 X_train.append(data)
                 Y_train.append(index)
+
 
 X_train = np.array(X_train)
 X_test  = np.array(X_test)

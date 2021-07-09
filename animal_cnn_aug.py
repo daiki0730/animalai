@@ -42,7 +42,6 @@ def model_train(X, y):
     model.add(Dense(3))
     model.add(Activation('softmax'))
 
-    import tensorflow
     opt = keras.optimizers.RMSprop(lr=0.0003, decay=1e-6)
 
     model.compile(loss='categorical_crossentropy', optimizer=opt,metrics=['accuracy'])

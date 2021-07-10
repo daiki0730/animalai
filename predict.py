@@ -55,6 +55,5 @@ def main():
     predicted  = result.argmax()
     percentage = int(result[predicted] * 100)
     print("{0} ( {1} %)".format(classes[predicted], percentage))
-
 if __name__ == "__main__":
     main()

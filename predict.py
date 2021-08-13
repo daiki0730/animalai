@@ -1,5 +1,4 @@
-import os
-os.environ['KMP_DUPLICATE_LIB_OK']='True'
+
 from keras.models import Sequential,load_model
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
